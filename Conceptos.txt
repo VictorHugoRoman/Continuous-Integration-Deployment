@@ -1,0 +1,41 @@
+**Conceptos CI/CD**
+    Continuous Integration / Continuous Deployment.
+En el mundo de DevOps existen tres terminos populares q son Continuous Integration, Continuous Delivery, Continuous Deployment.
+Tambien podemos verlo como una serie de pasos o buenas practicas a seguir para conseguir una automatizacion completa de nuestro
+proceso de deployment a produccion ayudandonos a esa manera a reducir nuestros errores y nuestro tiempo de entrega entre las
+actualizaciones, ademas nos puede ayudar a enfocarnos unicamente en construir nuestro producto q s lo q realmente nos importa a
+nosotros los desarrolladores.
+
+Que es Continuous Integration:
+    Es un proceso en donde cada cambio que realizamos en nuestro código d b d ser testeado y verificado por las pruebas q hemos
+    escrito con anterioridad, por ejemplo hacer unit test de nuestro codigo para q esté validado antes de integrarse a otra rama.
+    Ejemplo Real:
+        Un equipo d desarrolladores pueden tener diferente ramas en Git entonces c pueden hacer diferentes cambios para la proxima
+        actualizacion, a la semana esto puede generar mas de 500 cambios n nuestro codigo al final de la semana cuando llegue el 
+        momento de unir todos esos cambios debemos asegurarnos d q todo funciona d manera esperada con la menor cantidad de estres, 
+        y la menor cantidad de errores posibles para garantizar la calidad, con la integracion continua no necesitamos esperar a hacer
+        un push a nuestra rama para ver todos esos cambios, en su lugar todos esos cambios c van a ir uniendo d forma continua y 
+        podemos entonces tambien resolver los errores q esto genere, es decir, si un test no pasó podemos darnos cuenta inmediatamente
+        y solucionarlo, existe herramientas como TravisCI, Azure DevOps, Jenkins q nos ayudan en l proceso d conocer cuando un cambio
+        no debería unirse por algún error.
+
+Que es Continuous Delivery:
+    Es el mismo proceso anterior, solo q d una manera mas automatizada y además nuestros tests de aceptacion dbn ser de calidad, porque
+    Continuous Delivery se asegura d q cada cambio realizado esté listo para ser lanzado a produccion, cada cambio c lanza n una etapa
+    intermedia.
+    Aqui tenemos q tener la confianza de realizar el deployment en produccion con un solo boton, es decir, hacemos un commit y c activa
+    inmediatamente nuestro Continuous Integration c buildean los test y luego c preparan para los diferentes ambientes q son o pueden ser
+    Test, Staging y produccion en esta ultima se hace de forma manual.
+
+Que es Continuous Deployment:
+    como su nombre lo indica, nos encargamos de hacer deployments continuamente y d forma automatizada, es decir, si el Continuous Delivery
+    nos dejaba solo la etapa de produccion de forma manual, con este Deployment hacemos el pase a produccion de forma transparente con un
+    solo commit, es un paso mas haya del Continuous Delivery ya q no necesitamos de un boton para mandar los cambios a produccion, cada cambio 
+    q pase a cada etapa del camino no va a generar ningun tipo d error porque ya lo hemos puesto anteriormente en un Continuous Delivery y sobre
+    todo c mandará a produccion de forma automatica.
+    Puede ser dificil de implementar pero una vez logrado el equipo de desarrolladores c enfocan unicamente n l producto.
+
+Que es Pipeline:
+    Secuencia de pasos a seguir en un proceso de DevOps, es decir, podemos tener un Pipeline para un Continuous Integration q diga por ejemplo
+    q cada vez q tu hagas un commit a la rama master yo necesito d q todos los tests unitarios se corran y unicamente si c corren esos tests se
+    podrá hacer la integracion ya sea un merge con una rama o cualquier otra posiblidad.
