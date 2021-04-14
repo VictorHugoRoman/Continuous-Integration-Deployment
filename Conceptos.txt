@@ -1,10 +1,10 @@
 **Conceptos CI/CD**
     Continuous Integration / Continuous Deployment.
-En el mundo de DevOps existen tres terminos populares q son Continuous Integration, Continuous Delivery, Continuous Deployment.
-Tambien podemos verlo como una serie de pasos o buenas practicas a seguir para conseguir una automatizacion completa de nuestro
-proceso de deployment a produccion ayudandonos a esa manera a reducir nuestros errores y nuestro tiempo de entrega entre las
-actualizaciones, ademas nos puede ayudar a enfocarnos unicamente en construir nuestro producto q s lo q realmente nos importa a
-nosotros los desarrolladores.
+    En el mundo de DevOps existen tres terminos populares q son Continuous Integration, Continuous Delivery, Continuous Deployment.
+    Tambien podemos verlo como una serie de pasos o buenas practicas a seguir para conseguir una automatizacion completa de nuestro
+    proceso de deployment a produccion ayudandonos a esa manera a reducir nuestros errores y nuestro tiempo de entrega entre las
+    actualizaciones, ademas nos puede ayudar a enfocarnos unicamente en construir nuestro producto q s lo q realmente nos importa a
+    nosotros los desarrolladores.
 
 Que es Continuous Integration:
     Es un proceso en donde cada cambio que realizamos en nuestro código d b d ser testeado y verificado por las pruebas q hemos

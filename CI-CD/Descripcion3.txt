@@ -1,0 +1,25 @@
+**Implementado CI/CD en nuesta app**
+    Pasar las variables de entorno al proveedor de la nube donde haremos el deploy,
+    en nuestro caso Heroku.
+
+Paso 1: Copiar las propiedades y sus valores del archivo ".env" a la plataforma de heroku será para el ambiente de produccion, el puerto (PORT) no copiar.
+    1.1 Ir a Heroku.com y abrir nuestro proyecto "compartetusideas-nodejs" en mi caso.
+    1.2 Entrar al apartado "Settings"
+        1.2.1 Buscar al apartado "Config Vars", click al boton "Reveal Config Vars"
+        1.2.3 Ingresar los valores en KEY, VALUE y con el boton "ADD" añadiremos la variable de entorno.
+        1.2.4 Cambiar los valores q c ocuparan en produccion por ejemplo "swaggerDEV" cambiarlo a "swaggerPROD".
+        1.2.5 Con esto podemos borrar nuestro archivo .env .
+Paso 2: Otorgar permisos a travis para acceder a nuestro repositorio "backend-section", ya q este c encargará
+            de hacer los commits automaticos.
+    2.1 Ir a travis-ci.org, n la parte izquierda "My repositories" click n l boton "+".
+    2.2 En la seccion "Legacy Services Integration" apareceran los repositorios publico de nuestra cuenta de github, en nuestro
+        caso seleccionamos "backend-section" con el siguiente boton marcarlo con una palomita.
+    2.3 Con esta configuracion una vez q hagamos un commit el archivo travis activará el travis CI q acabamos de configurar
+        y comenzara a ejecutar las instruccion q indicamos en nuestro pipeline(.travis.yml)
+Paso 3: Agregar el repositorio de Heroku a nuestra aplicacion, Ir al dashboard Heroku.com
+    3.1 Seleccionamos nuestra aplicacion "compartetusideas-nodejs"
+    3.2 Entrar al apartado "Deploy"
+        3.2.1 Buscar la seccion "Existing Git repository" y copiamos el comando. heroku git:remote -a compartetusideas-nodejs 
+            Lo q hace este comando es agregar el remote a github, y si hacemos un push a este remote, automaticamente heroku
+            va a buildear nuestro proyecto y lo va a desplegar y lo va a desplegar a su plataforma, pero en nuestro caso lo
+            haremos a traves de github con travis.

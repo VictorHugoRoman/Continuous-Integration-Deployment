@@ -1,0 +1,16 @@
+**Implementado CI/CD en nuesta app**
+    Empezamos con algunos conceptos. Vamos a utilizar la tecnologia de Heroku, travis...
+    Vamos a implementar CI/CD en nuestra app "share your ideas" para ello simplemente copie y pegue los archivos necesarios
+    para que la app corriera, esto solo lo hice asi para tener separada la implementacion CI/CD.
+
+Que es Heroku: 
+    Es una plataforma como servicio(PaaS) mas utilizada en la actualidad en entornos empresariales por su fuerte enfowue en
+    resolver el despliegue de una aplicacion. Además te permite manejar los servidores y sus configuraciones, escalamiento y 
+    la administracion, se puede utilizar en cualquier lenguaje q c ejecute en entornos linux.
+
+Que es Travis:
+    Es una plataforma de Integracion Continua (CI), q c conecta con algun repositorio en nuestro caso será con GitHub,
+    lo q hace es q cuando nosotros cada vez q hacemos push a github este l manda un aviso a travis, travis lee el archivo
+    archivo.travis.yml q c encuentra en nuestro proyecto este archivo contiene las operaciones q tiene q hacer travis lo
+    habitual es hacer git clone del proyecto, build del proyecto, correr los tests. Entonce si c pasaron los tests o no
+    travis manda un aviso a traves del archivo README.md de gitHub.
